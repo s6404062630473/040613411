@@ -1,0 +1,15 @@
+h1{
+    text-align: center;
+}
+
+ol{
+    text-align: left;
+}
+
+p{
+    text-align: center;
+}
+
+.cent{
+    display: flex; justify-content: center; align-items: center;
+}
