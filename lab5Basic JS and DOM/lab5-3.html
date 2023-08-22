@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <script>
+        let student = [
+            {
+                fullname: 'นายตั้งใจ เรียนมาก',
+                age: 18,
+                year: 1,
+                gpa: 3.40,
+                help: true
+            },
+            {
+                fullname: 'นายส่งงาน ตลอดมา',
+                age: 19,
+                year: 2,
+                gpa: 3.00,
+                help: false
+            },
+            {
+                fullname: 'นางสาวใส่ใจ ดีงาม',
+                age: 20,
+                year: 3,
+                gpa: 2.90,
+                help: true
+            },
+            {
+                fullname: 'นายขี้เกียจ จังเลย',
+                age: 21,
+                year: 4,
+                gpa: 2.50,
+                help: true
+            }
+        ]
+
+        for (let i = 0; i < student.length; i++) {
+            if (student[i].gpa >= 3.20) {
+                if (student[i].help == true) {
+                    console.log(student[i].fullname + " " + "เกิดเมื่อปี" + " " + (2566 - student[i].age) + " " + "ได้ทุนการศึกษา" + " " + "เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานวิชาภาคด้วย")
+                } else {
+                    console.log(student[i].fullname + " " + "เกิดเมื่อปี" + " " + (2566 - student[i].age) + " " + "ได้ทุนการศึกษา" + " " + "เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังไม่ได้ช่วยงานวิชาภาค")
+                }
+            } else if (student[i].year >= 2 && student[i].gpa >= 2.75 && student[i].help == true) {
+                console.log(student[i].fullname + " " + "เกิดเมื่อปี" + " " + (2566 - student[i].age) + " " + "ได้ทุนการศึกษา" + " " + "เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานวิชาภาคด้วย")
+            } else {
+                console.log(student[i].fullname + " " + "เกิดเมื่อปี" + " " + (2566 - student[i].age) + " " + "ไม่ได้ทุนการศึกษา" + " " + "เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์และยังไม่ได้ช่วยงานวิชาภาค")
+            }
+        }
+
+        for (let i = 0; i < 4; i++) {
+        console.log("ชั้นปีที่"+(i+1));
+        let check = 0;
+        for (let j = 0; j < student.length; j++) {
+            if (student[j].year == i + 1) {
+                if ((student[j].gpa > 3.20) || (student[j].year >= 2 && student[j].help && student[j].gpa > 2.75)) {
+                    check = 1;
+                    console.log(student[j].fullname + " เนื่องจากเกรดเฉลี่ยถึงเกณฑ์ และยัง" + (student[j].help == true ? "ช่วยงานภาควิชา" : "ไม่ได้ช่วยงานภาควิชา"));
+                }
+            }
+        }
+        if(check == 0){
+            console.log("ไม่มี");
+        }
+    }
+
+
+
+    </script>
+</head>
+
+<body>
+    <h1>LAB5 JS</h1>
+</body>
+
+</html>

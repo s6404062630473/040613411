@@ -1,0 +1,48 @@
+<html>
+
+<head>
+  <script>
+    function green(event) {
+      var input = document.getElementById("name")
+      var age = document.getElementById("age")
+      if (event.keyCode == 13) {
+         console.log("Enter key is pressed");
+         input.style.color = "green" ;
+         age.focus();
+      } else {
+        
+      }
+    }
+
+    function green1(event) {
+      var input = document.getElementById("age")
+      var birth = document.getElementById("birth")
+      if (event.keyCode == 13) {
+         console.log("Enter key is pressed");
+         input.style.color = "green" ;
+         birth.focus();
+      } else {
+        
+      }
+    }
+
+    function green2(event) {
+      var input = document.getElementById("birth")
+      if (event.keyCode == 13) {
+         console.log("Enter key is pressed");
+         input.style.color = "green" ;
+         focusNext();
+      } else {
+        
+      }
+    }
+  </script>
+</head>
+
+<body>
+  Name: <input type="text" id="name" onkeypress="green(event)" autofocus><br>
+  Age: <input type="text" id="age" onkeypress="green1(event)"><br>
+  Birthday: <input type="text" id="birth" onkeypress="green2(event)"><br>
+</body>
+
+</html>
