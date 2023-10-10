@@ -16,9 +16,10 @@
 
    while ($row = $stmt->fetch()) {
        echo "username: " . $row ["username"] . "<br>";
-       echo "order: " . $row ["SUM(ord_id/ord_id)"] . "<br>";
+       echo "order count : <a href='user_order.php?username=" . $row['username'] . "'> " . $row ["SUM(ord_id/ord_id)"] . "<br>";
        echo "<hr>\n";
    }
+   echo "<a href='product.php'>ไปยังสินค้าคงเหลือ</a>";
 }
    else{$stmt = $pdo->prepare("SELECT * FROM `orders` WHERE username = '{$_SESSION["username"]}'");
    $stmt->execute();
